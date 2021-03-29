@@ -101,6 +101,7 @@ class EmployeeController extends Controller {
                         'last_name' => 'required',
                         'card' => 'required',
                         'identification_number' => 'required',
+                        'deparment' => 'required',
             ]);
 
             if ($validator->fails()) {
@@ -114,6 +115,7 @@ class EmployeeController extends Controller {
                         'last_name' => $request->last_name,
                         'card' => $request->card,
                         'identification_number' => $request->identification_number,
+                        'deparment' => $request->deparment,
             ]);
 
 
@@ -195,7 +197,7 @@ class EmployeeController extends Controller {
 
                     Record::create([
                         'card' => $request->card,
-                        'identification_number' => $request->card,
+                        'identification_number' => $request->identification_number,
                         'action' => 'fail',
                     ]);
                 }

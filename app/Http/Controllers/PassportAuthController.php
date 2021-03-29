@@ -37,9 +37,9 @@ class PassportAuthController extends Controller {
 
             $validator = Validator::make($request->all(), [
                         'name' => 'required',
-                        'last_name' => 'required',
+                        //'last_name' => 'required',
                         'email' => 'required|email|unique:users,email',
-                        'role' => 'required',
+                        //'role' => 'required',
                         'identification_number' => 'required',
             ]);
 
@@ -48,7 +48,7 @@ class PassportAuthController extends Controller {
                 return response()->json(['Falló la validación' => $validator->errors()], 422);
             }
 
-            $roles = array("admin", "invited", "ADMIN", "INVITED");
+            /*$roles = array("admin", "invited", "ADMIN", "INVITED");
             $permited = false;
 
             if (in_array($request->role, $roles)) {
@@ -58,13 +58,13 @@ class PassportAuthController extends Controller {
             if (!$permited) {
                 Log::error('Intentando crear un rol no permitido');
                 return response()->json('El rol no existe', 422);
-            }
+            }*/
 
             $input = $request->all();
 
             $user = User::create([
                         'name' => $input['name'],
-                        'last_name' => $input['last_name'],
+                        //'last_name' => $input['last_name'],
                         'email' => $input['email'],
                         'identification_number' => $input['identification_number'],
                         'password' => Hash::make($input['identification_number']),
@@ -112,5 +112,5 @@ class PassportAuthController extends Controller {
                     'message' => 'Usuario Deslogueado'
         ]);
     }
-
+       
 }

@@ -32,11 +32,19 @@
                 @foreach($records as $record)
                 <tr>
                     <td>{{$record->card}}</td>
-                    <td>{{$record->identification_number}}</td>                    
-                    <td>{{$record->employee->name}}</td>    
-                    <td>{{$record->employee->last_name}}</td>
-                    <td>{{$record->action}}</td>
-                    <td>{{$record->employee->deparment}}</td>
+                    <td>{{$record->identification_number}}</td>  
+                    
+                        @if($record->employee)
+                        <td>{{$record->employee->name}}</td>  
+                        <td>{{$record->employee->last_name}}</td>
+                        <td>{{$record->employee->deparment}}</td>
+                        @else
+                         <td>N/A</td>  
+                        <td>N/A</td>
+                        <td>N/A</td>
+                       @endif                     
+                    
+                    <td>{{$record->action}}</td>                  
                     <td>{{$record->created_at}}</td>                    
                  
                 </tr>   

@@ -4,12 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/room911/app/Http/Controllers/PassportAuthController.php</file>
-            <file>file:/C:/xampp/htdocs/room911/database/migrations/2021_03_18_014711_create_employees_table.php</file>
+            <file>file:/C:/xampp/htdocs/room911/app/Models/User.php</file>
+            <file>file:/C:/xampp/htdocs/room911/resources/views/login.blade.php</file>
             <file>file:/C:/xampp/htdocs/room911/app/Models/Record.php</file>
             <file>file:/C:/xampp/htdocs/room911/app/Http/Controllers/EmployeeController.php</file>
             <file>file:/C:/xampp/htdocs/room911/resources/views/reportPDF.blade.php</file>
             <file>file:/C:/xampp/htdocs/room911/routes/api.php</file>
             <file>file:/C:/xampp/htdocs/room911/app/Models/Employee.php</file>
+            <file>file:/C:/xampp/htdocs/room911/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/room911/resources/views/welcome.blade.php</file>
         </group>
     </open-files>
 </project-private>
